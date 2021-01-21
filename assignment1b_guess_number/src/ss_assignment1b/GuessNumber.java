@@ -21,7 +21,7 @@ public class GuessNumber {
 
             System.out.print("Guess a number betweem 1-100: ");
             value = scanner.nextInt();
-            
+
             if ((random - 10) <= value && value <= (random + 10)) {
                 System.out.println("Random number is " + random);
                 break;
