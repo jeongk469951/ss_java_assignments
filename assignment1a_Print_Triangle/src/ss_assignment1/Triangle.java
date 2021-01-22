@@ -1,8 +1,7 @@
 package ss_assignment1;
 
-public class Triangle {
+public abstract class Triangle {
 
-    public void display(int number, int dots){
-        return;
-    }
+    public abstract void display(int number, int dots);
+
 }
