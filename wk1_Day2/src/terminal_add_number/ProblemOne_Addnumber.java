@@ -1,4 +1,4 @@
-package ss_day2_assign;
+package terminal_add_number;
 
 
 /**
@@ -7,7 +7,7 @@ package ss_day2_assign;
  * Class to take argument from commandline and print out sum.
  */
 
-public class Addnumber {
+public class ProblemOne_Addnumber {
 
     /**
      *
@@ -19,7 +19,6 @@ public class Addnumber {
         int total = 0;
 
         try {
-
             //check for null
             nullCheck(args);
 
@@ -29,26 +28,19 @@ public class Addnumber {
                 int number = Integer.parseInt(arg);
 
                 total = total + number;
-
             }
-
             System.out.println("Total sum is " + total);
-
-
         }
 
         catch(NullPointerException e){
 
             System.out.println("Number is required please input numbers");
-
         }
 
         catch(NumberFormatException e) {
 
             System.out.println("You must input a number not characters");
-
         }
-
 
     }
 
