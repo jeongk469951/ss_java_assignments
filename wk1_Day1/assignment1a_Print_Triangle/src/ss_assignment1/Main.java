@@ -9,6 +9,7 @@ public class Main {
 
         int size = 4;
         int dots = 8;
+        //.
 
         Triangle[] triangles = { new FirstTriangle(size),
                                  new SecondTriangle(size),
