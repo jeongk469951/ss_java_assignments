@@ -29,6 +29,10 @@ public class CountChars {
 
         var validate = new CountChars();
 
+        String some = "fff";
+
+
+
         try(BufferedReader bufRe = new BufferedReader(new FileReader("/Users/jeongkim/Desktop/smmothstack/java/assignments/wk1_Day3/util/myfile.txt"))){
 
             nullCheck(args);
