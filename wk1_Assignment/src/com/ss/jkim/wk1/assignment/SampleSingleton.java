@@ -3,10 +3,7 @@ package com.ss.jkim.wk1.assignment;
 
 
 import java.math.BigDecimal;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 
 public class SampleSingleton {
@@ -25,14 +22,20 @@ public class SampleSingleton {
         return instance;
     }
 
-//    public static void databaseQuery(BigDecimal input) {
-//
-//        conn = DriverManager.getConnection("url of database");
-//        Statement st = conn.createStatement();
-//        ResultSet rs = st.executeQuery("select id from table");
-//        int x = 0;
-//        while (rs.next()) {
-//            x = rs.getInt(1) * input;
-//        }
-//    }
+    public static void databaseQuery(BigDecimal input) throws SQLException {
+
+        try {
+            conn = DriverManager.getConnection("url of database");
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery("select id from table");
+
+            int x = 0;
+            while (rs.next()) {
+                x = rs.getInt(1) * input.intValue();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+    }
 }
