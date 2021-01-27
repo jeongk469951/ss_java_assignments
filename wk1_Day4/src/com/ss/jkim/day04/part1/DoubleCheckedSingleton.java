@@ -17,7 +17,7 @@ public class DoubleCheckedSingleton {
 
     public static DoubleCheckedSingleton getInstance() {
 
-        //Omly using lock when necessary to get better performance
+        //Only using lock when necessary to get better performance
         if(instance == null){
             synchronized (instance){
                 instance = new DoubleCheckedSingleton();

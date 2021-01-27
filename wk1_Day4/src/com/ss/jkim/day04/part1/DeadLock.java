@@ -49,14 +49,14 @@ public class DeadLock {
         public void run() {
 
             try {
-                synchronized (Lock1) {
+                synchronized (Lock2) {
                     System.out.println("lock 1");
 
                     Thread.sleep(1000);
 
                     System.out.println("waiting");
 
-                    synchronized (Lock2) {
+                    synchronized (Lock1) {
                         System.out.println("lock 2");
                     }
                 }
